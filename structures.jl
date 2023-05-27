@@ -21,3 +21,5 @@ struct SinglyLinkedList{T} <: List{T}
     length::Int
     head::Union{SinglyLinkedListNode{T}, Nothing}
 end
+
+SinglyLinkedList{Int}(0,nothing)
