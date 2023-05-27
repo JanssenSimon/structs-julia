@@ -1,25 +1,27 @@
 #!/bin/env julia
 
-println("Hello world!")
+println("Saluton mondo!")
 
 # Array
-array = [1, 2, 3, 4]
+tabelo = [1, 2, 3, 4]
 
 # Lists
 
-abstract type List{T} end
-abstract type Node{T} end
+abstract type Listo{T} end
+abstract type Nodo{T} end
 
 ## Singly linked lists
 
-struct SinglyLinkedListNode{T} <: Node{T}
+       
+struct UnuopeLigillistoNodo{T} <: Node{T}
     value::T
-    next::Union{SinglyLinkedListNode{T}, Nothing}
+    next::Union{UnuopeLigillistoNodo{T}, Nothing}
 end
 
-struct SinglyLinkedList{T} <: List{T}
+struct UnuopeLigillisto{T} <: List{T}
     length::Int
-    head::Union{SinglyLinkedListNode{T}, Nothing}
+    head::Union{UnuopeLigillisto{T}, Nothing}
 end
 
-SinglyLinkedList{Int}(0,nothing)
+UnuopeLigillisto{Int}(0,nothing) #ça c'est très chill
+UnuopeLigillisto(0,nothing)     #ça c'est broken
